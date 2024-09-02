@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 244 30.6% 9.6%;
+    --primary: 221.2 83.2% 53.3%;
+    --secondary: 210 40% 96.1%;
+    --typography-primary: 0 0% 96.1%;
+    --typography-secondary: 217.1 15% 55.7%;
+  }
+}
