@@ -1,0 +1,40 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Own Portfolio",
+    "collectionId": "aec8e361-0109-479c-9973-8740e4c80e35",
+    "dateExported": "2024-08-25T08:05:14.169Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1d2ef22e-2631-4f14-986a-610833fa0ddd",
+            "colId": "aec8e361-0109-479c-9973-8740e4c80e35",
+            "containerId": "",
+            "name": "Add Project",
+            "url": "http://localhost:3000/api/projects",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-08-25T08:02:37.085Z",
+            "modified": "2024-08-25T08:02:57.255Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"data\": {\n    \"image\": \"/projects/amirhosseinbanaei.webp\",\n    \"fa\": {\n      \"title\": \"Digitize Shop\",\n      \"description\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore in, repellat distinctio numquam architecto! Dolorum vel debitis dignissimos accusamus reiciendis maxime dolor.\"\n    },\n    \"en\": {\n      \"title\": \"Digitize Shop\",\n      \"description\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore in, repellat distinctio numquam architecto! Dolorum vel debitis dignissimos accusamus reiciendis maxime dolor.\"\n    },\n    \"links\": {\n      \"preview\": \"#\",\n      \"github\": \"#\"\n    }\n  }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7a44e925-5fc3-40c3-9740-e1439a89570b",
+            "colId": "aec8e361-0109-479c-9973-8740e4c80e35",
+            "containerId": "",
+            "name": "Upload Project Image",
+            "url": "http://localhost:3000/api/upload",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-08-25T08:04:58.272Z",
+            "modified": "2024-08-25T08:04:58.272Z",
+            "headers": []
+        }
+    ],
+    "ref": "iLETBYbO4CL9wJwyr_lIQvWSoVsT7gvzeLqD2TJPjTR_O5TBbT7kpB-KlahsfMsvJtlTIqdUAFZcHXV1Ral4og"
+}
