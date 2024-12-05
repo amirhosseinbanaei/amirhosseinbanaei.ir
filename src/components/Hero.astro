@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import socialsData from "../data/socials";
+const { t } = Astro.props;
+---
+
+<section
+  class="bg-heroSection flex h-svh w-full flex-col items-center justify-center gap-10 bg-cover bg-center py-10 md:h-fit lg:h-screen"
+>
+  <div class="bg-waveLine absolute left-0 top-0 -z-10 h-screen w-full bg-cover">
+  </div>
+  <div class="flex flex-col items-center gap-5">
+    <div class="relative aspect-square h-28 w-28 rounded-lg">
+      <Image
+        width={720}
+        height={720}
+        loading={"eager"}
+        src="/amirhosseinbanaei.webp"
+        alt={`amir hossein banaei`}
+        class="rounded-3xl"
+      />
+    </div>
+    <h1 class="text-2xl font-bold text-typography-primary lg:text-4xl">
+      {t.ownName}
+    </h1>
+  </div>
+
+  <span class="flex flex-col items-center gap-10 fa:gap-20">
+    <h2
+      class={`title -z-10 mx-auto text-center text-5xl font-black opacity-70 leading-[60px] md:leading-[120px] md:text-[83px] md:w-3/4 lg:text-8xl lg:leading-[125px]`}
+    >
+      {t.Hero.title.h2}
+    </h2>
+    <h3
+      class="text-lg text-typography-primary fa:text-xl lg:text-xl lg:fa:text-2xl"
+    >
+      {t.Hero.title.h3}
+    </h3>
+  </span>
+
+  <section class="flex h-20 items-center gap-7">
+    {
+      socialsData.map(
+        (socialData) =>
+          !socialData.isHidden && (
+            <a
+              title={`${socialData.title}`}
+              href={`${socialData.href}`}
+              target="_blank"
+              aria-label={socialData.title}
+            >
+              <socialData.icon
+                class={`fill-typography-secondary hover:fill-typography-primary ${socialData.title === "X" ? "size-9" : "size-10"}`}
+              />
+            </a>
+          ),
+      )
+    }
+  </section>
+</section>
+
+<style>
+  .title {
+    leading-trim: both;
+    text-edge: cap;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    text-shadow: 0px 0px 13.3769px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2.82488px);
+  }
+</style>

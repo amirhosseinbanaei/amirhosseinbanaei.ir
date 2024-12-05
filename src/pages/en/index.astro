@@ -1,0 +1,23 @@
+---
+import Hero from "@/components/Hero.astro";
+import Layout from "@/layouts/Layout.astro";
+import t from "@/locales/en.json";
+import Widget from "@/components/Widget.astro";
+import SideSpace from "@/layouts/SideSpace.astro";
+import TitleAndDescription from "@/components/TitleAndDescription.astro";
+import Skills from "@/components/Skills.astro";
+import Projects from "@/components/Projects.astro";
+---
+
+<Layout locale="en">
+  <Hero t={t} />
+  <Widget t={t} />
+
+  <SideSpace>
+    <TitleAndDescription description={t.whoAmI} />
+  </SideSpace>
+
+  <Skills t={t} />
+
+  <Projects t={t} />
+</Layout>

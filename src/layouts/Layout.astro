@@ -1,0 +1,63 @@
+---
+import Footer from "@/components/Footer.astro";
+import MetaData from "@/components/MetaData.astro";
+
+const { locale } = Astro.props;
+const dir = locale === "fa" ? "rtl" : "ltr";
+const font = locale === "fa" ? "font-Vazirmatn" : "font-Inter";
+---
+
+<!doctype html>
+<html lang={locale} dir={dir}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:url" content="https://amirhosseinbanaei.ir" />
+    <meta property="og:locale" content={locale} />
+    <meta
+      name="keywords"
+      content="امیرحسین بنایی, امیرحسین بنائی, amirhosseinbanaei, amir hossein banaei, Amir Hossein Banaei, AmirHosseinBanaei, amir hosein banaei, amirhosein banaei,amirhossein, amirhosein"
+    />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <MetaData />
+  </head>
+  <body dir={dir} class={`${locale} ${font} overflow-auto w-full bg-background`}>
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-radius: 5px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #f5f5f5;
+    border-radius: 5px;
+    width: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #BFBFC3;
+  }
+</style>

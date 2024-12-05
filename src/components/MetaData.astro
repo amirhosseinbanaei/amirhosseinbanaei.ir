@@ -1,0 +1,12 @@
+---
+import metaDataInformation from "@/data/metaData";
+const locale = Astro.currentLocale as "fa" | "en";
+const { title, description } = metaDataInformation[locale];
+---
+
+<meta name="description" content={description} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:site_name" content={title} />
+<meta property="og:brand" content={title} />
+<title>{title}</title>

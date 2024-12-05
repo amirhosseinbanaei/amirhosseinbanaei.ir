@@ -1,0 +1,32 @@
+[
+  {
+    "image": "/digitize.webp",
+    "en": {
+      "title": "Digitize",
+      "description": "Digitize is a shopping project that I have created it with tailwind css and pure Javascript. The point of this project was work with dom and shadow dom and creating component using pure Javascript."
+    },
+    "fa": {
+      "title": "دیجی تایز",
+      "description": "دیجی تایز یک پروژه یوآی فروشگاهی است که من آن را با تیلویند و جاوااسکریپت خام توسعه دادم . هدف از انجام این پروژه کار با dom و shadow dom و ایجاد کامپوننت با جاوااسکریپت خام بوده است ."
+    },
+    "links": {
+      "preview": "https://digitize.amirhosseinbanaei.ir/",
+      "github": "https://github.com/amirhosseinbanaei/Digitize-project"
+    }
+  },
+  {
+    "image": "/digitize.webp",
+    "en": {
+      "title": "Digitize",
+      "description": "Digitize is a shopping project that I have created it with tailwind css and pure Javascript. The point of this project was work with dom and shadow dom and creating component using pure Javascript."
+    },
+    "fa": {
+      "title": "دیجی تایز",
+      "description": "دیجی تایز یک پروژه یوآی فروشگاهی است که من آن را با تیلویند و جاوااسکریپت خام توسعه دادم . هدف از انجام این پروژه کار با dom و shadow dom و ایجاد کامپوننت با جاوااسکریپت خام بوده است ."
+    },
+    "links": {
+      "preview": "https://digitize.amirhosseinbanaei.ir/",
+      "github": "https://github.com/amirhosseinbanaei/Digitize-project"
+    }
+  }
+]

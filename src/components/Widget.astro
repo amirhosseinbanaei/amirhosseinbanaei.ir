@@ -1,0 +1,83 @@
+---
+import SideSpace from "@/layouts/SideSpace.astro";
+import PersonsIcon from "@/assets/icons/Persons.svg";
+import personalInformation from "@/data/personalInfo";
+
+const { t } = Astro.props;
+const locale = Astro.currentLocale;
+---
+
+<SideSpace>
+  <section
+    class={`relative grid h-auto w-full grid-cols-12 rounded-lg py-5 md:px-4 xl:h-32 xl:grid-rows-1 xl:rounded-3xl xl:px-8 black_container`}
+  >
+    <section
+      class="col-span-1 hidden aspect-square h-full w-full md:col-span-3 md:block xl:col-span-1"
+    >
+      <PersonsIcon class="h-full w-full fill-typography-primary" />
+    </section>
+
+    <section
+      class="col-span-full h-full w-full flex-col justify-center space-y-5 px-4 md:col-span-9 md:px-10 xl:space-y-1 xl:px-5"
+    >
+      <h1
+        class="text-center text-xl font-bold text-typography-primary md:text-start lg:text-2xl"
+      >
+        {t.Widget.title}
+      </h1>
+      <div
+        class="flex h-full w-full flex-col gap-4 xl:h-1/2 xl:flex-row 2xl:gap-10"
+      >
+        {
+          personalInformation.map((personalInfo) => {
+            return (
+              <div class="flex w-fit items-center">
+                <span class="aspect-square p-1 ltr:mr-1 rtl:ml-2">
+                  <personalInfo.icon class="inline size-6 fill-typography-primary" />
+                </span>
+                <a
+                  href={personalInfo.href}
+                  aria-label={personalInfo.value}
+                  dir="ltr"
+                  class="tracking-wide text-typography-primary md:text-lg"
+                >
+                  {personalInfo.value}
+                </a>
+              </div>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    {/* Cv Button Container */}
+    <section
+      class="col-span-full justify-end flex h-20 w-full p-5 pb-0 xl:col-span-2 xl:h-auto xl:p-3"
+    >
+      <button
+        class="h-full w-full rounded-lg bg-[#313953] text-base text-typography-primary md:text-xl"
+      >
+        <a href={`/public/cvs/cv-${locale}.pdf`} download>
+          {t.Widget.button}
+        </a>
+      </button>
+    </section>
+  </section>
+</SideSpace>
+
+<style>
+  .black_container {
+    background: linear-gradient(
+      160.33deg,
+      rgba(217, 217, 217, 0.04) 13.17%,
+      rgba(255, 255, 255, 0.01) 97.91%
+    );
+    box-shadow:
+      0px 4px 20px rgba(47, 24, 108, 0.1),
+      0px 4px 20px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    opacity: 0.9;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: rgba(224, 224, 224, 0.8);
+  }
+</style>

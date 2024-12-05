@@ -1,0 +1,29 @@
+---
+import SideSpace from "@/layouts/SideSpace.astro";
+import TitleAndDescription from "./TitleAndDescription.astro";
+import skillsInformation from "@/data/skills";
+const { t } = Astro.props;
+---
+
+<SideSpace>
+  <section class="my-10 flex flex-col gap-10" dir="ltr">
+    <TitleAndDescription
+      title={t.Skills.title}
+      description={t.Skills.description}
+    />
+    <div class="mt-10 flex w-full flex-wrap justify-center gap-10 gap-y-20">
+      {
+        skillsInformation.map((skill) => {
+          return (
+            <div class="flex h-24 w-28 flex-col items-center justify-center gap-4">
+              <skill.icon class="size-12 fill-typography-primary" />
+              <p class="font-medium tracking-wide capitalize text-typography-primary">
+                {skill.title}
+              </p>
+            </div>
+          );
+        })
+      }
+    </div>
+  </section>
+</SideSpace>

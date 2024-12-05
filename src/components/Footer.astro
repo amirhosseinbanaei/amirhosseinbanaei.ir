@@ -1,0 +1,51 @@
+---
+import locales from "@/data/locales";
+import SideSpace from "@/layouts/SideSpace.astro";
+import tFA from "@/locales/fa.json";
+import tEN from "@/locales/en.json";
+const currentLocale = Astro.currentLocale;
+const t = currentLocale === "fa" ? tFA.Footer : tEN.Footer;
+---
+
+<footer>
+  <SideSpace className="mb-0 mt-20 pb-0">
+    <div
+      class="black_container flex w-full flex-col-reverse items-center justify-between gap-y-7 rounded-t-3xl p-10 md:h-24 md:flex-row md:py-0"
+    >
+      <p class="text-center text-lg text-typography-primary md:text-start">
+        {t.title}
+      </p>
+      <div class="flex gap-5">
+        {
+          locales.map(async (locale: string) => {
+            return (
+              <a
+                href={`${locale !== "fa" ? `/${locale}` : "/"}`}
+                class={`text-lg uppercase ${locale === currentLocale ? "text-typography-primary" : "text-typography-secondary"}`}
+              >
+                {locale}
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </SideSpace>
+</footer>
+
+<style>
+  .black_container {
+    background: linear-gradient(
+      160.33deg,
+      rgba(217, 217, 217, 0.04) 13.17%,
+      rgba(255, 255, 255, 0.01) 97.91%
+    );
+    box-shadow:
+      0px 4px 20px rgba(47, 24, 108, 0.1),
+      0px 4px 20px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    opacity: 0.9;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: rgba(224, 224, 224, 0.8);
+  }
+</style>

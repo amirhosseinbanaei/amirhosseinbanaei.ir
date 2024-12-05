@@ -1,0 +1,32 @@
+---
+import projects from "@/data/projects.json";
+import SideSpace from "@/layouts/SideSpace.astro";
+import TitleAndDescription from "./TitleAndDescription.astro";
+import ProjectCard from "./ProjectCard.astro";
+
+const { t } = Astro.props;
+---
+
+<SideSpace>
+  <section class="flex w-full flex-col gap-20 md:gap-32">
+    <TitleAndDescription
+      title={t.Projects.title}
+      description={t.Projects.description}
+    />
+
+    {/* Cards Container */}
+    <section class="flex flex-col gap-20 md:gap-32">
+      {
+        projects.map((projectInfo, index: number) => {
+          return (
+            <ProjectCard
+              data={projectInfo}
+              reverse={index % 2 === 0 && true}
+              t={t}
+            />
+          );
+        })
+      }
+    </section>
+  </section>
+</SideSpace>
