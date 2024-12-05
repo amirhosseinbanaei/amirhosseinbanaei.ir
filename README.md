@@ -1,7 +1,5 @@
 # Own Portfolio
 
-[![View Project](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
 > 🛠️ **Built With** 
 
 ![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white)
@@ -9,4 +7,4 @@
 
 > 🧑‍🚀 **Screenshot** 
 
-![screenshot](https://raw.githubusercontent.com/amirhosseinbanaei/amirhosseinbanaei.ir/main/screen.png")
+![screenshot](https://github.com/amirhosseinbanaei/amirhosseinbanaei.ir/blob/main/screen.png)
